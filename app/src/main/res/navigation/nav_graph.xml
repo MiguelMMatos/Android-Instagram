@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="a45423.projeto.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_usersProfileFragment"
+            app:destination="@id/usersProfileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_comentFragment"
+            app:destination="@id/comentFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewAllMessagesFragment"
+            app:destination="@id/viewAllMessagesFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <navigation android:id="@+id/Register"
+        app:startDestination="@id/registerMainFragment">
+        <fragment
+            android:id="@+id/registerMainFragment"
+            android:name="a45423.projeto.register.ui.RegisterMainFragment"
+            android:label="fragment_register_main"
+            tools:layout="@layout/fragment_register_main">
+            <action
+                android:id="@+id/action_registerMainFragment_to_registerEmailFragment2"
+                app:destination="@id/registerEmailFragment"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+            <action
+                android:id="@+id/action_registerMainFragment_to_nameFragment"
+                app:destination="@id/nameFragment"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+        </fragment>
+        <fragment
+            android:id="@+id/nameFragment"
+            android:name="a45423.projeto.register.ui.NameFragment"
+            android:label="fragment_name"
+            tools:layout="@layout/fragment_name">
+            <action
+                android:id="@+id/action_nameFragment_to_registerAge"
+                app:destination="@id/registerAge" />
+            <argument
+                android:name="Username"
+                app:argType="string" />
+            <argument
+                android:name="Password"
+                app:argType="string" />
+            <argument
+                android:name="Email"
+                app:argType="string" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/registerAge"
+            android:name="a45423.projeto.register.ui.RegisterAgeFragment"
+            android:label="fragment_register_age"
+            tools:layout="@layout/fragment_register_age">
+
+            <action
+                android:id="@+id/action_registerAge_to_registerRegion"
+                app:destination="@id/registerRegion"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+            <argument
+                android:name="Username"
+                app:argType="string" />
+            <argument
+                android:name="Password"
+                app:argType="string" />
+            <argument
+                android:name="Name"
+                app:argType="string" />
+            <argument
+                android:name="Email"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerRegion"
+            android:name="a45423.projeto.register.ui.RegisterRegionFragment"
+            android:label="fragment_register_region"
+            tools:layout="@layout/fragment_register_region">
+            <argument
+                android:name="Username"
+                app:argType="string" />
+            <argument
+                android:name="Password"
+                app:argType="string" />
+            <argument
+                android:name="Age"
+                app:argType="string" />
+            <argument
+                android:name="Name"
+                app:argType="string" />
+            <argument
+                android:name="Email"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_registerRegion_to_registerProfilePic"
+                app:destination="@id/registerProfilePic" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerEmailFragment"
+            android:name="a45423.projeto.register.ui.RegisterEmailFragment"
+            android:label="fragment_register_email"
+            tools:layout="@layout/fragment_register_email" >
+            <action
+                android:id="@+id/action_registerEmailFragment2_to_nameFragment"
+                app:destination="@id/nameFragment" />
+            <argument
+                android:name="Username"
+                app:argType="string" />
+            <argument
+                android:name="Password"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerProfilePic"
+            android:name="a45423.projeto.register.ui.RegisterProfilePic"
+            android:label="fragment_register_profile_pic"
+            tools:layout="@layout/fragment_register_profile_pic" >
+            <argument
+                android:name="Username"
+                app:argType="string" />
+            <argument
+                android:name="Password"
+                app:argType="string" />
+            <argument
+                android:name="Age"
+                app:argType="string" />
+            <argument
+                android:name="Name"
+                app:argType="string" />
+            <argument
+                android:name="Email"
+                app:argType="string" />
+            <argument
+                android:name="Region"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_registerProfilePic_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:popUpTo="@id/loadingFragment"
+                app:popUpToInclusive="true"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="a45423.projeto.LoadingScreen.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_loadingFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="a45423.projeto.Login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_Register"
+            app:destination="@id/Register"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="a45423.projeto.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_addPostFragment"
+            app:destination="@id/AddNewPost"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_showPost"
+            app:destination="@id/showPost"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_followFragment"
+            app:destination="@id/followFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <navigation android:id="@+id/AddNewPost"
+        app:startDestination="@id/addPostFragment">
+        <fragment
+            android:id="@+id/addPostDescription_Fragment"
+            android:name="a45423.projeto.Posts.AddPostDescription_Fragment"
+            android:label="AddPostDescription_Fragment" >
+            <action
+                android:id="@+id/action_addPostFragment_to_profileFragment"
+                app:destination="@id/profileFragment"
+                app:popUpTo="@id/addPostFragment"
+                app:popUpToInclusive="true"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+            <argument
+                android:name="Uri"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addPostFragment"
+            android:name="a45423.projeto.Posts.AddPostFragment"
+            android:label="fragment_add_post"
+            tools:layout="@layout/fragment_add_post">
+            <action
+                android:id="@+id/action_addPostFragment_to_addPostDescription_Fragment"
+                app:destination="@id/addPostDescription_Fragment"
+                app:enterAnim="@transition/slide_left"
+                app:popExitAnim="@transition/slide_right" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/showPost"
+        android:name="a45423.projeto.Posts.ShowPost"
+        android:label="fragment_show_post"
+        tools:layout="@layout/fragment_show_post" >
+        <argument
+            android:name="userUID"
+            app:argType="string" />
+        <argument
+            android:name="postID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showPost_to_comentFragment"
+            app:destination="@id/comentFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="a45423.projeto.Search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_usersProfileFragment"
+            app:destination="@id/usersProfileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersProfileFragment"
+        android:name="a45423.projeto.Profile.UsersProfileFragment"
+        android:label="fragment_users_profile"
+        tools:layout="@layout/fragment_users_profile" >
+        <argument
+            android:name="userID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_usersProfileFragment_to_showPost"
+            app:destination="@id/showPost"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+        <action
+            android:id="@+id/action_usersProfileFragment_to_followFragment"
+            app:destination="@id/followFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+        <action
+            android:id="@+id/action_usersProfileFragment_to_followFragment2"
+            app:destination="@id/followFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_usersProfileFragment_to_followFragment3"
+            app:destination="@id/followFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_usersProfileFragment_to_followFragment4"
+            app:destination="@id/followFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+        <action
+            android:id="@+id/action_usersProfileFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/followFragment"
+        android:name="a45423.projeto.Profile.FollowFragment"
+        android:label="fragment_follow"
+        tools:layout="@layout/fragment_follow" >
+        <argument
+            android:name="follow"
+            app:argType="string" />
+        <argument
+            android:name="userUID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_followFragment_to_usersProfileFragment"
+            app:destination="@id/usersProfileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/comentFragment"
+        android:name="a45423.projeto.Comments.ComentFragment"
+        android:label="fragment_coment"
+        tools:layout="@layout/fragment_coment" >
+        <argument
+            android:name="userID"
+            app:argType="string" />
+        <argument android:name="postID" />
+        <action
+            android:id="@+id/action_comentFragment_to_usersProfileFragment"
+            app:destination="@id/usersProfileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="a45423.projeto.Message.MessagesFragment"
+        android:label="MessagesFragment" >
+        <argument
+            android:name="receiverID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllMessagesFragment"
+        android:name="a45423.projeto.Message.ViewAllMessagesFragment"
+        android:label="ViewAllMessagesFragment" >
+        <action
+            android:id="@+id/action_viewAllMessagesFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="a45423.projeto.Profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="region"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@transition/slide_left"
+            app:popExitAnim="@transition/slide_right"/>
+    </fragment>
+</navigation>

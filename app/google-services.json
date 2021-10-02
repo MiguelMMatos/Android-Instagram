@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "644646949336",
+    "project_id": "projetodam-df606",
+    "storage_bucket": "projetodam-df606.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644646949336:android:9fb18f43914a809f5e62ad",
+        "android_client_info": {
+          "package_name": "a45423.projeto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644646949336-kltit4sfuk0shnc756bajo0goeh8qkro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "a45423.projeto",
+            "certificate_hash": "59347ac9fa538901994c6bebcf153f20d12ff3d4"
+          }
+        },
+        {
+          "client_id": "644646949336-r19vd984ooqec2lt63odes29u8evit22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkP6grbTyBJuT7nsbYZp3q916S_I3d8D0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644646949336-r19vd984ooqec2lt63odes29u8evit22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

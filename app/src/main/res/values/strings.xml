@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Projeto</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_region">Region</string>
+    <string name="prompt_gender">Password</string>
+    <string name="action_register">Register</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+
+
+    <string name="regionUpperText">My region\nis</string>
+    <string name="usernameUpperText">My username\nis</string>
+    <string name="passwordUpperText">My password\nis</string>
+    <string name="nameUpperText">My name\nis</string>
+    <string name="emailUpperText">My email\nis</string>
+    <string name="ageUpperText">My birthday\nis</string>
+    <string name="profilePicUpperText">Lastly choose your\nprofile pic</string>
+    <string name="chooseNewPost">Choose new picture</string>
+    <string name="chooseADescription">Choose a description</string>
+
+
+    <string name="continueWord">Continue</string>
+    <string name="uploadWord">Upload</string>
+    <string name="usernameWord">Username</string>
+    <string name="fullnameWord">Full Name</string>
+    <string name="passwordWord">Password</string>
+    <string name="loginWord">Login</string>
+    <string name="registerWord">Register</string>
+    <string name="nextWord">Next</string>
+    <string name="finishWord">Finish</string>
+    <string name="emailWord">Email</string>
+    <string name="followWord">Follow</string>
+
+    <string name="wordPost">Post</string>
+    <string name="wordMatches">Matches</string>
+    <string name="wordFollowers">Followers</string>
+    <string name="wordFollowed">Followed</string>
+
+    <string name="failLogin">Login failed!</string>
+
+    <string name="usernameWarning">Insert a valid username!</string>
+    <string name="nameWarning">Insert a valid name!</string>
+    <string name="regionWarning">Insert a valid region!</string>
+
+    <string name="regionWord">Region</string>
+    <string name="nameWord">Name</string>
+    <string name="updateWord">Update</string>
+
+    <string name="add_comment">Add coment...</string>
+    <string name="post">Post</string>
+    <string name="zeroWord">0</string>
+
+    <string name="messageWord">Message</string>
+
+    <string name="send_message">Send message...</string>
+    <string name="sendWord">Send</string>
+
+    <string name="cantSendPost">You can`t send empty comment</string>
+    <string name="viewAll">View all</string>
+    <string name="commentsWord">comments</string>
+
+    <string name="editWord">Edit</string>
+
+    <string name="yearText">Year</string>
+    <string name="monthText">Month</string>
+    <string name="dayText">Day</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

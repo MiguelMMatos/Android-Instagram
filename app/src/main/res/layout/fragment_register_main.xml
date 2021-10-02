@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDark"
+    android:theme="@style/ThemeOverlay.Projeto.FullscreenContainer"
+    tools:context=".register.ui.RegisterMainFragment">
+
+    <LinearLayout
+        android:id="@+id/UsernameContainer"
+        android:layout_width="407dp"
+        android:layout_height="150sp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nameUpperText"
+            android:layout_width="313dp"
+            android:layout_height="83dp"
+            android:gravity="bottom|left"
+            android:text="@string/usernameUpperText"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/name_value"
+            android:layout_width="309dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PasswordContainer"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_marginTop="244dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/passwordUpperText"
+            android:layout_width="313dp"
+            android:layout_height="83dp"
+            android:gravity="bottom|left"
+            android:text="@string/passwordUpperText"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/password_value"
+            android:layout_width="309dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:password="true"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registerMain_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continueWord"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
